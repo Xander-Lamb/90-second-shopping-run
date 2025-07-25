@@ -1,0 +1,68 @@
+[gd_scene load_steps=11 format=3 uid="uid://cw3pp1rd5lcuj"]
+
+[ext_resource type="Texture2D" uid="uid://dno5qeqw8l7h7" path="res://Screenshot 2025-07-22 at 8.56.27 AM.png" id="1_riurp"]
+[ext_resource type="Script" uid="uid://b608lr4w7xc63" path="res://objective_screen.gd" id="1_y14yt"]
+[ext_resource type="Texture2D" uid="uid://dwu6wyoyhl7nc" path="res://Objectives-22-07-2025.png" id="2_ndsuk"]
+[ext_resource type="Texture2D" uid="uid://dbun6ltc43t63" path="res://Screenshot_2025-07-24_at_12.39.41_PM-removebg-preview.png" id="4_y14yt"]
+[ext_resource type="Texture2D" uid="uid://dr2bjeg0emxco" path="res://Ice-Cream-24-07-2025.png" id="5_y14yt"]
+[ext_resource type="Texture2D" uid="uid://bncmc73air7xc" path="res://Brown-Top-Beer-22-07-2025.png" id="6_etvkb"]
+[ext_resource type="Texture2D" uid="uid://67uoolea5x8c" path="res://Screenshot 2025-07-24 at 1.39.57 PM.png" id="6_ndijf"]
+[ext_resource type="Texture2D" uid="uid://bjqrt68pofl4f" path="res://Screenshot 2025-07-24 at 1.38.39 PM.png" id="8_hswmf"]
+[ext_resource type="Texture2D" uid="uid://cw4qfogvyn32b" path="res://Lemons-22-07-2025.png" id="8_oy4ch"]
+[ext_resource type="PackedScene" uid="uid://cddsjcpvseui7" path="res://Fade_transitions.tscn" id="10_etvkb"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_y14yt")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(644, 333)
+scale = Vector2(0.923899, 0.902353)
+texture = ExtResource("1_riurp")
+
+[node name="Objectives Title" type="Sprite2D" parent="."]
+position = Vector2(590, 119)
+scale = Vector2(0.544922, 0.493311)
+texture = ExtResource("2_ndsuk")
+
+[node name="Ice Cream" type="Sprite2D" parent="."]
+position = Vector2(206.543, 320.345)
+scale = Vector2(0.54237, 0.47411)
+texture = ExtResource("4_y14yt")
+
+[node name="IceCreamDescription" type="Sprite2D" parent="."]
+position = Vector2(213, 545)
+scale = Vector2(0.275391, 0.426816)
+texture = ExtResource("5_y14yt")
+
+[node name="BrownTop Beer" type="Sprite2D" parent="."]
+position = Vector2(588, 333)
+scale = Vector2(0.35127, 0.369099)
+texture = ExtResource("6_ndijf")
+
+[node name="BTB Description" type="Sprite2D" parent="."]
+position = Vector2(613, 554)
+scale = Vector2(0.387695, 0.583121)
+texture = ExtResource("6_etvkb")
+
+[node name="Lemons" type="Sprite2D" parent="."]
+position = Vector2(985, 331)
+scale = Vector2(0.445377, 0.476996)
+texture = ExtResource("8_hswmf")
+
+[node name="Lemons Description" type="Sprite2D" parent="."]
+position = Vector2(978, 548)
+scale = Vector2(0.246155, 0.276289)
+texture = ExtResource("8_oy4ch")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(580, 303)
+zoom = Vector2(2.6, 2.6)
+
+[node name="Fade_transition" parent="." instance=ExtResource("10_etvkb")]
+visible = false
+offset_left = -90.0
+offset_top = -36.0
+offset_right = 2039.0
+offset_bottom = 1146.0
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition"]

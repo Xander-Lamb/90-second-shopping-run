@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi3pcdwd5rdxk"]
+
+[ext_resource type="Script" uid="uid://cunl7cnnyibf8" path="res://main_menu.gd" id="1_ww8v7"]
+[ext_resource type="Texture2D" uid="uid://hatrqdsf0x72" path="res://Untitled design.png" id="2_3a000"]
+[ext_resource type="Texture2D" uid="uid://dopdsprpvj828" path="res://Controls-16-07-2025.png" id="3_lnoba"]
+[ext_resource type="PackedScene" uid="uid://cddsjcpvseui7" path="res://Fade_transitions.tscn" id="4_urqug"]
+
+[node name="Main Menu" type="Node2D"]
+script = ExtResource("1_ww8v7")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(974, 557)
+scale = Vector2(1.44962, 1.44051)
+texture = ExtResource("2_3a000")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(956, 194)
+texture = ExtResource("3_lnoba")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(913, 559)
+zoom = Vector2(1.5, 1.5)
+
+[node name="Fade_transition" parent="." instance=ExtResource("4_urqug")]
+visible = false
+offset_left = -90.0
+offset_top = -36.0
+offset_right = 2039.0
+offset_bottom = 1146.0
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition"]
+
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
