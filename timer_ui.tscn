@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://dthqb7nd6r1l7"]
+
+[ext_resource type="Script" uid="uid://bab8ap71c5epj" path="res://timer_ui.gd" id="1_40xfn"]
+
+[sub_resource type="FontFile" id="FontFile_tj0gf"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/90/0/ascent = 0.0
+cache/0/90/0/descent = 0.0
+cache/0/90/0/underline_position = 0.0
+cache/0/90/0/underline_thickness = 0.0
+cache/0/90/0/scale = 1.0
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/65/0/ascent = 0.0
+cache/0/65/0/descent = 0.0
+cache/0/65/0/underline_position = 0.0
+cache/0/65/0/underline_thickness = 0.0
+cache/0/65/0/scale = 1.0
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_40xfn")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -704.0
+offset_bottom = 66.0
+grow_horizontal = 0
+theme_override_fonts/font = SubResource("FontFile_tj0gf")
+theme_override_font_sizes/font_size = 65
+text = "TIME REMAINING: 0.56"

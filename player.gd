@@ -46,3 +46,15 @@ func _ready():
 		scale = Vector2(0.5, 0.5)
 	else:
 		scale = Vector2(1, 1)
+
+var speed = 200  # default speed
+
+func _speed():
+	var current_scene = get_tree().current_scene
+
+	if current_scene.name == "Outside_supermarket2":
+		scale = Vector2(0.5, 0.5)
+		speed = 100  
+	else:
+		scale = Vector2(1, 1)
+		speed = 200 
