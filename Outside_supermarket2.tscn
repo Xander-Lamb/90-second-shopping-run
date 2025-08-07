@@ -2243,7 +2243,7 @@ position = Vector2(660, 422)
 shape = SubResource("CircleShape2D_d0lkv")
 
 [node name="From Supermarket" type="Marker2D" parent="."]
-position = Vector2(482, 286)
+position = Vector2(480, 279)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]

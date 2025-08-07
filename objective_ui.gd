@@ -12,7 +12,7 @@ func update_visibility():
 	if current_scene == null:
 		return
 	var scene_name = current_scene.name
-	var hidden_scenes = ["Main Menu", "Objective Screen", "Game Over"]
+	var hidden_scenes = ["Main Menu", "Objective Screen", "Game Over", "VictoryScene"]
 	print(scene_name)
 	if scene_name in hidden_scenes:
 		self.visible = false

@@ -21120,7 +21120,7 @@ offset_bottom = 1146.0
 [node name="Fade_timer" type="Timer" parent="Fade_transition"]
 
 [node name="From Ice Cream Shop" type="Marker2D" parent="."]
-position = Vector2(486, 164)
+position = Vector2(480, 142)
 
 [connection signal="body_entered" from="Area2D Enter Icecream" to="Area2D Enter Icecream" method="_on_Area2D_body_entered"]
 [connection signal="body_entered" from="Area2D Enter Icecream/Area2D2 Leave supermarket" to="Area2D Enter Icecream/Area2D2 Leave supermarket" method="_on_body_entered"]

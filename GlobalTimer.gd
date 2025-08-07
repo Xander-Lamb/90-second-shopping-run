@@ -9,6 +9,9 @@ signal timer_ended()
 
 func start_timer():
 	timer_running = true
+	
+func stop_timer():
+	timer_running = false
 
 func _process(delta):
 	if timer_running:

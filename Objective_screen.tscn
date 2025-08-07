@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cw3pp1rd5lcuj"]
+[gd_scene load_steps=12 format=3 uid="uid://cw3pp1rd5lcuj"]
 
 [ext_resource type="Texture2D" uid="uid://dno5qeqw8l7h7" path="res://Screenshot 2025-07-22 at 8.56.27 AM.png" id="1_riurp"]
 [ext_resource type="Script" uid="uid://b608lr4w7xc63" path="res://objective_screen.gd" id="1_y14yt"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bjqrt68pofl4f" path="res://Screenshot 2025-07-24 at 1.38.39 PM.png" id="8_hswmf"]
 [ext_resource type="Texture2D" uid="uid://cw4qfogvyn32b" path="res://Lemons-22-07-2025.png" id="8_oy4ch"]
 [ext_resource type="PackedScene" uid="uid://cddsjcpvseui7" path="res://Fade_transitions.tscn" id="10_etvkb"]
+[ext_resource type="Texture2D" uid="uid://do5tx62u2uxpe" path="res://-Enter-To-Claim-8-08-2025.png" id="10_ndijf"]
 
 [node name="Objective Screen" type="Node2D"]
 script = ExtResource("1_y14yt")
@@ -20,7 +21,7 @@ scale = Vector2(0.923899, 0.902353)
 texture = ExtResource("1_riurp")
 
 [node name="Objectives Title" type="Sprite2D" parent="."]
-position = Vector2(590, 119)
+position = Vector2(589, 103)
 scale = Vector2(0.544922, 0.493311)
 texture = ExtResource("2_ndsuk")
 
@@ -53,6 +54,11 @@ texture = ExtResource("8_hswmf")
 position = Vector2(978, 548)
 scale = Vector2(0.246155, 0.276289)
 texture = ExtResource("8_oy4ch")
+
+[node name="EnterToClaim" type="Sprite2D" parent="."]
+position = Vector2(583, 154)
+scale = Vector2(0.239247, 0.207346)
+texture = ExtResource("10_ndijf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(580, 303)

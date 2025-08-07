@@ -24,11 +24,12 @@ func _on_scene_changed(_newscene, _oldsceneName):
 func _update_visibility():
 	var scene_name = get_tree().current_scene.name
 
-	if scene_name == "Main Menu" or scene_name == "Objective Screen" or scene_name == "Game Over":
+	if scene_name == "Main Menu" or scene_name == "Objective Screen" or scene_name == "Game Over" or scene_name == "VictoryScene":
 		hide()
+		time_left = 60.0
+		timer_active = false
 	else:
 		show()
-
-	#Starting the timer when outside supermarket
-	if scene_name == "Outside_Supermarket":
-		timer_active = true
+		#Starting the timer when outside supermarket
+		if scene_name == "Outside_Supermarket":
+			timer_active = true
