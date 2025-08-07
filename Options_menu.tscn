@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dopdsprpvj828" path="res://Controls-16-07-2025.png" id="3_lnoba"]
 [ext_resource type="PackedScene" uid="uid://cddsjcpvseui7" path="res://Fade_transitions.tscn" id="4_urqug"]
 
-[node name="Main Menu" type="Node2D"]
+[node name="Options Menu" type="Node2D"]
 script = ExtResource("1_ww8v7")
 
 [node name="Background" type="Sprite2D" parent="."]

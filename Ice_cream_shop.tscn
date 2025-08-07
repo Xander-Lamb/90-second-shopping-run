@@ -8694,7 +8694,7 @@ sources/0 = SubResource("TileSetAtlasSource_0f2py")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gty6w"]
 size = Vector2(50, 3)
 
-[node name="Ice_Cream_Shop" type="Node2D"]
+[node name="Ice Cream Shop" type="Node2D"]
 
 [node name="Walls" type="TileMap" parent="."]
 texture_filter = 1

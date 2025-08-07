@@ -31,7 +31,9 @@ func _on_quit_pressed() -> void:
 
 func _on_fade_timer_timeout() -> void:
 	if button_type == "start" :
-		get_tree().change_scene_to_file("res://Objective_screen.tscn")
+		#get_tree().change_scene_to_file("res://Objective_screen.tscn")
+		SceneManager.change_scene("res://Objective_screen.tscn")
 		
 	elif button_type == "options" :
-			get_tree().change_scene_to_file("res://Options_menu.tscn")
+			#get_tree().change_scene_to_file("res://Options_menu.tscn")
+			SceneManager.change_scene("res://Options_menu.tscn")

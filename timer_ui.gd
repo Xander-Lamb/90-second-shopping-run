@@ -1,29 +1,34 @@
 extends CanvasLayer
 
-@export var start_time: int = 60
-@export var game_over_scene: String = "res://GameOverScene.tscn"  # Replace with your own
-
-var time_left: int = 0
-var countdown_timer: Timer
+var time_left := 60.0
+var timer_active := false
+@onready var label = get_node("Panel/Label")
 
 func _ready():
-	time_left = start_time
-	update_label()
-	start_countdown()
+	_update_visibility()
+	SceneManager.scene_changed.connect(_on_scene_changed)
 
-func start_countdown():
-	countdown_timer = Timer.new()
-	countdown_timer.wait_time = 1
-	countdown_timer.one_shot = false
-	countdown_timer.autostart = true
-	countdown_timer.timeout.connect(_on_timer_tick.bind())
-func _on_timer_tick():
-	time_left -= 1
-	update_label()
-	
-	if time_left <= 0:
-		countdown_timer.stop()
-		get_tree().change_scene_to_file(game_over_scene)
+func _process(delta):
+	if timer_active and time_left > 0:
+		time_left -= delta
+		label.text = "TIME REMAINING: " + str(round(time_left))
+	elif timer_active and time_left <= 0:
+		timer_active = false
+		#get_tree().change_scene_to_file("res://Game_Over.tscn")
+		SceneManager.change_scene("res://Game_Over.tscn")
 
-func update_label():
-	$TimerLabel.text = "⏱️ %d" % time_left
+func _on_scene_changed(_scene):
+	await get_tree().create_timer(0.01).timeout
+	_update_visibility()
+
+func _update_visibility():
+	var scene_name = get_tree().current_scene.name
+
+	if scene_name == "Main Menu" or scene_name == "Objective Screen":
+		hide()
+	else:
+		show()
+
+	#Starting the timer when outside supermarket
+	if scene_name == "Outside_Supermarket":
+		timer_active = true

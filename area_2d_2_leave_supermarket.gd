@@ -11,4 +11,5 @@ func _on_body_exited(body: CharacterBody2D) -> void:
 
 func _process(delta):
 	if entered == true:
-		get_tree().change_scene_to_file("res://Outside_supermarket2.tscn")
+		#get_tree().change_scene_to_file("res://Outside_supermarket2.tscn")
+		SceneManager.change_scene("res://Outside_supermarket2.tscn")

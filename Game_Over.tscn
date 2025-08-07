@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://d13rewfognn55"]
+
+[ext_resource type="Texture2D" uid="uid://dno5qeqw8l7h7" path="res://Screenshot 2025-07-22 at 8.56.27 AM.png" id="1_0ghu6"]
+
+[node name="Game Over" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1594, 885)
+scale = Vector2(3.13429, 2.83621)
+texture = ExtResource("1_0ghu6")

@@ -15,4 +15,5 @@ func _on_Area2D_body_exited(body) -> void:
 	
 func _process(delta):
 	if entered == true:
-		get_tree().change_scene_to_file("res://Super_market.tscn")
+		#get_tree().change_scene_to_file("res://Super_market.tscn")
+		SceneManager.change_scene("res://Super_market.tscn")

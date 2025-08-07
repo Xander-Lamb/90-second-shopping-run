@@ -17,4 +17,5 @@ func _ready():
 
 	await fade_timer.timeout
 
-	get_tree().change_scene_to_file(next_scene_path)
+	#get_tree().change_scene_to_file(next_scene_path)
+	SceneManager.change_scene(next_scene_path)

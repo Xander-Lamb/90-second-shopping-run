@@ -18,12 +18,13 @@ config/icon="res://icon.svg"
 [autoload]
 
 ObjectiveUi="*res://Objective_UI.tscn"
+TimerUi="*res://timer_ui.tscn"
+SceneManager="*res://SceneManager.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=3
 
 [input]
 
