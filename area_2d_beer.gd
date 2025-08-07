@@ -1,11 +1,19 @@
 extends Area2D
 
+@export var item_name = "Beer" # Set this in the Inspector for each Area2D
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+var nexttolemons = false;
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == "CharacterBody2D": # Adjust to match your player's node name
+		print("Player hit " + item_name + "!")
+		nexttolemons = true;
 
+func _on_body_exited(body: Node2D) -> void:
+	if body.name == "CharacterBody2D": # Adjust to match your player's node name
+		print("Player left " + item_name + "!")
+		nexttolemons = false;
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _input(event):
+	if event.is_action_pressed("ui_accept") && nexttolemons:
+		print("Going to pick up " + item_name + "!")
+		ObjectiveUi.show_tick(item_name)

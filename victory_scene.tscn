@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw1h0mrixh2ki"]
+
+[ext_resource type="Texture2D" uid="uid://dn411i7hmhkej" path="res://green-tick-mark-icon-transparent-background-7017516950512374lahsvx00q-removebg-preview.png" id="1_ffolw"]
+
+[node name="VictoryScene" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(978.5, 486)
+scale = Vector2(1.746, 1.62)
+texture = ExtResource("1_ffolw")

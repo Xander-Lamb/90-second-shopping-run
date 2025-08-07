@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://d13rewfognn55"]
+[gd_scene load_steps=3 format=3 uid="uid://d13rewfognn55"]
 
 [ext_resource type="Texture2D" uid="uid://dno5qeqw8l7h7" path="res://Screenshot 2025-07-22 at 8.56.27 AM.png" id="1_0ghu6"]
+[ext_resource type="Texture2D" uid="uid://cccknej8k2vpk" path="res://GAME-OVER-1-08-2025.png" id="2_5ruhh"]
 
 [node name="Game Over" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1594, 885)
+position = Vector2(1460, 878)
 scale = Vector2(3.13429, 2.83621)
 texture = ExtResource("1_0ghu6")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(1487, 998)
+scale = Vector2(2.72803, 3.89898)
+texture = ExtResource("2_5ruhh")

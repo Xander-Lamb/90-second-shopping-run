@@ -17,14 +17,14 @@ func _process(delta):
 		#get_tree().change_scene_to_file("res://Game_Over.tscn")
 		SceneManager.change_scene("res://Game_Over.tscn")
 
-func _on_scene_changed(_scene):
+func _on_scene_changed(_newscene, _oldsceneName):
 	await get_tree().create_timer(0.01).timeout
 	_update_visibility()
 
 func _update_visibility():
 	var scene_name = get_tree().current_scene.name
 
-	if scene_name == "Main Menu" or scene_name == "Objective Screen":
+	if scene_name == "Main Menu" or scene_name == "Objective Screen" or scene_name == "Game Over":
 		hide()
 	else:
 		show()

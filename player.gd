@@ -40,12 +40,19 @@ func _physics_process(delta: float) -> void:
 	move_and_collide(velocity*delta)
 	
 func _ready():
+	SceneManager.scene_changed.connect(_on_scene_changed)
 	var current_scene = get_tree().root.get_child(get_tree().root.get_child_count() - 1)
 	print("Current scene name: ", current_scene.name)
 	if current_scene.name == "Outside_Supermarket":  
 		scale = Vector2(0.5, 0.5)
 	else:
 		scale = Vector2(1, 1)
+
+func _on_scene_changed(_newscene, _oldsceneName):
+	var marker_name = "From " + _oldsceneName
+	var marker = _newscene.get_node_or_null(marker_name)
+	if marker:
+		global_position = marker.global_position
 
 var speed = 200  # default speed
 

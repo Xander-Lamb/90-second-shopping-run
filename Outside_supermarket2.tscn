@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://mj1iqctkbn2d"]
+[gd_scene load_steps=25 format=3 uid="uid://mj1iqctkbn2d"]
 
 [ext_resource type="Texture2D" uid="uid://blw0e10k44otj" path="res://tilemapurbancity.png" id="1_jj4c3"]
 [ext_resource type="Texture2D" uid="uid://wsy7iqpvv8lm" path="res://tilemap_packed.png" id="2_1x0d8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://4hcekwhb2fsl" path="res://NPC_Wife.gd" id="4_23h44"]
 [ext_resource type="Texture2D" uid="uid://b8wsad24o6n5l" path="res://Conference_woman_idle_anim_32x32.png" id="5_h0va5"]
 [ext_resource type="Script" uid="uid://27pmj08lgdvp" path="res://area_2dEnter_Supermarket.gd" id="6_h0va5"]
+[ext_resource type="Script" uid="uid://ey84okcrdlsf" path="res://area_2d_giving_wife_groceries.gd" id="7_y6hkg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1x0d8"]
 texture = ExtResource("1_jj4c3")
@@ -2183,6 +2184,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y6hkg"]
 size = Vector2(28, 10)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0lkv"]
+radius = 20.0
+
 [node name="Outside_Supermarket" type="Node2D"]
 
 [node name="Roads" type="TileMap" parent="."]
@@ -2210,7 +2214,7 @@ format = 2
 layer_0/tile_data = PackedInt32Array(1769501, 720896, 15, 1835037, 720896, 15, 1769504, 720896, 15, 1835040, 720896, 15, 1769502, 786432, 16, 1769503, 786432, 16, 1703971, 720896, 16, 1769507, 720896, 17, 1835042, 720896, 15, 1835043, 720896, 15, 1835044, 720896, 15, 917533, 786432, 15, 917534, 786432, 15, 983069, 917504, 16, 983070, 917504, 16, 917531, 720896, 15, 917532, 720896, 15, 983068, 720896, 15, 983067, 720896, 15, 917535, 720896, 15, 917536, 720896, 15, 983072, 720896, 15, 983071, 720896, 15, 786467, 196608, 10, 917523, 720896, 13, 983059, 720896, 14, 917524, 720896, 13, 983060, 720896, 14, 917525, 720896, 13, 983061, 720896, 14, 1048596, 983040, 10, 1048595, 786432, 9, 1048597, 786432, 9, 851986, 0, 5, 851990, 131072, 5, 786450, 0, 3, 786454, 131072, 3, 786451, 65536, 3, 786452, 65536, 3, 786453, 65536, 3, 851987, 65536, 5, 851988, 65536, 5, 851989, 65536, 5, 1048594, 1048576, 8, 1114130, 1048576, 9, 1048598, 1048576, 8, 1114134, 1048576, 9, 1048601, 262144, 12, 1048610, 393216, 12, 1048609, 327680, 12, 1048608, 327680, 12, 1048607, 262144, 12, 1048606, 327680, 12, 1048605, 262144, 12, 1048604, 393216, 12, 1048603, 327680, 12, 1835030, 917504, 15, 1900566, 917504, 16, 1835029, 917504, 15, 1900565, 917504, 16, 1835028, 917504, 15, 1900564, 917504, 16, 1835026, 917504, 15, 1900562, 917504, 16, 1835025, 917504, 15, 1900561, 917504, 16, 1835024, 917504, 15, 1900560, 917504, 16, 1703945, 917504, 8, 1507335, 1048576, 8, 1572871, 1048576, 9, 1507339, 1048576, 8, 1572875, 1048576, 9, 1769479, 1048576, 8, 1835015, 1048576, 9, 1769483, 1048576, 8, 1835019, 1048576, 9, 1048583, 458752, 15, 1048584, 524288, 15, 851974, 720896, 16, 917510, 720896, 17, 851977, 720896, 16, 917513, 720896, 17, 851976, 720896, 16, 917512, 720896, 17, 851975, 720896, 16, 917511, 720896, 17, 983049, 917504, 15, 1048585, 917504, 17, 1048582, 917504, 17, 983046, 917504, 15, 983048, 786432, 17, 983047, 786432, 17, 1114117, 1048576, 10, 1114122, 1048576, 10, 1048581, 1048576, 8, 1048586, 1048576, 8, 917547, 720896, 15, 983083, 720896, 15, 1048619, 720896, 15, 1048602, 327680, 12)
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_xs6an")]
-position = Vector2(648, 416)
+position = Vector2(625, 384)
 
 [node name="Wife_NPC" type="CharacterBody2D" parent="."]
 script = ExtResource("4_23h44")
@@ -2231,5 +2235,16 @@ script = ExtResource("6_h0va5")
 position = Vector2(481, 270)
 shape = SubResource("RectangleShape2D_y6hkg")
 
+[node name="Area2D Giving Wife Groceries" type="Area2D" parent="."]
+script = ExtResource("7_y6hkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D Giving Wife Groceries"]
+position = Vector2(660, 422)
+shape = SubResource("CircleShape2D_d0lkv")
+
+[node name="From Supermarket" type="Marker2D" parent="."]
+position = Vector2(482, 286)
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D Giving Wife Groceries" to="Area2D Giving Wife Groceries" method="_on_body_entered"]

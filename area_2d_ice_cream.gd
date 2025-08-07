@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var item_name = "Lemons" # Set this in the Inspector for each Area2D
+@export var item_name = "IceCream" # Set this in the Inspector for each Area2D
 
 var nexttolemons = false;
 func _on_body_entered(body: Node2D) -> void:
