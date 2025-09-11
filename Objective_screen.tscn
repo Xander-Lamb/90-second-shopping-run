@@ -61,8 +61,7 @@ scale = Vector2(0.239247, 0.207346)
 texture = ExtResource("10_ndijf")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(580, 303)
-zoom = Vector2(2.6, 2.6)
+position = Vector2(610, 335)
 
 [node name="Fade_transition" parent="." instance=ExtResource("10_etvkb")]
 visible = false

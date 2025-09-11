@@ -14,8 +14,8 @@ func _process(delta):
 		label.text = "TIME REMAINING: " + str(round(time_left))
 	elif timer_active and time_left <= 0:
 		timer_active = false
-		#get_tree().change_scene_to_file("res://Game_Over.tscn")
-		SceneManager.change_scene("res://Game_Over.tscn")
+		#get_tree().change_scene_to_file("res://Losing_Cutscene.tscn")
+		SceneManager.change_scene("res://Losing_Cutscene.tscn")
 
 func _on_scene_changed(_newscene, _oldsceneName):
 	await get_tree().create_timer(0.01).timeout
@@ -24,7 +24,7 @@ func _on_scene_changed(_newscene, _oldsceneName):
 func _update_visibility():
 	var scene_name = get_tree().current_scene.name
 
-	if scene_name == "Main Menu" or scene_name == "Objective Screen" or scene_name == "Game Over" or scene_name == "VictoryScene":
+	if scene_name == "Main Menu" or scene_name == "Objective Screen" or scene_name == "Options Menu" or scene_name == "Game Over" or scene_name == "VictoryScene" or scene_name == "CutSceneLose" or scene_name == "CutSceneWin":
 		hide()
 		time_left = 60.0
 		timer_active = false

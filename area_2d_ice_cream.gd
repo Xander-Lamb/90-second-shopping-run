@@ -1,15 +1,15 @@
 extends Area2D
 
-@export var item_name = "IceCream" # Set this in the Inspector for each Area2D
+@export var item_name = "IceCream" 
 
 var nexttolemons = false;
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "CharacterBody2D": # Adjust to match your player's node name
+	if body.name == "CharacterBody2D": 
 		print("Player hit " + item_name + "!")
 		nexttolemons = true;
 
 func _on_body_exited(body: Node2D) -> void:
-	if body.name == "CharacterBody2D": # Adjust to match your player's node name
+	if body.name == "CharacterBody2D": 
 		print("Player left " + item_name + "!")
 		nexttolemons = false;
 

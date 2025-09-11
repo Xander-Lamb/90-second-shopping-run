@@ -1,6 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dthqb7nd6r1l7"]
 
 [ext_resource type="Script" uid="uid://bab8ap71c5epj" path="res://timer_ui.gd" id="1_40xfn"]
+[ext_resource type="FontFile" uid="uid://c2m2iwklsaovc" path="res://Roboto-VariableFont_wdth,wght.ttf" id="2_noerv"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_40xfn"]
 bg_color = Color(1, 1, 1, 1)
@@ -8,63 +9,30 @@ border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 65
 corner_radius_top_right = 65
 corner_radius_bottom_right = 65
 corner_radius_bottom_left = 65
-
-[sub_resource type="FontFile" id="FontFile_tj0gf"]
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/90/0/ascent = 0.0
-cache/0/90/0/descent = 0.0
-cache/0/90/0/underline_position = 0.0
-cache/0/90/0/underline_thickness = 0.0
-cache/0/90/0/scale = 1.0
-cache/0/70/0/ascent = 0.0
-cache/0/70/0/descent = 0.0
-cache/0/70/0/underline_position = 0.0
-cache/0/70/0/underline_thickness = 0.0
-cache/0/70/0/scale = 1.0
-cache/0/65/0/ascent = 0.0
-cache/0/65/0/descent = 0.0
-cache/0/65/0/underline_position = 0.0
-cache/0/65/0/underline_thickness = 0.0
-cache/0/65/0/scale = 1.0
-cache/0/32/0/ascent = 0.0
-cache/0/32/0/descent = 0.0
-cache/0/32/0/underline_position = 0.0
-cache/0/32/0/underline_thickness = 0.0
-cache/0/32/0/scale = 1.0
-cache/0/64/0/ascent = 0.0
-cache/0/64/0/descent = 0.0
-cache/0/64/0/underline_position = 0.0
-cache/0/64/0/underline_thickness = 0.0
-cache/0/64/0/scale = 1.0
-cache/0/60/0/ascent = 0.0
-cache/0/60/0/descent = 0.0
-cache/0/60/0/underline_position = 0.0
-cache/0/60/0/underline_thickness = 0.0
-cache/0/60/0/scale = 1.0
+shadow_size = 2
 
 [sub_resource type="LabelSettings" id="LabelSettings_noerv"]
-font_size = 64
+font_size = 32
 font_color = Color(0, 0, 0, 1)
 
 [node name="CanvasLayer" type="CanvasLayer"]
 script = ExtResource("1_40xfn")
 
 [node name="Panel" type="Panel" parent="."]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -816.0
-offset_top = 54.0
-offset_right = -65.0
-offset_bottom = 156.0
+anchors_preset = -1
+anchor_left = 0.807
+anchor_top = 0.066
+anchor_right = 0.807
+anchor_bottom = 0.165
+offset_left = -222.96
+offset_top = -17.52
+offset_right = 222.04
+offset_bottom = -31.8
 grow_horizontal = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_40xfn")
 metadata/_edit_use_anchors_ = true
@@ -72,16 +40,16 @@ metadata/_edit_use_anchors_ = true
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.965379
-anchor_top = -0.00980392
-anchor_right = 0.965379
-anchor_bottom = -0.00980392
-offset_left = -700.0
-offset_top = 25.0
-offset_right = 4.0
-offset_bottom = 91.0
+anchor_left = 0.574506
+anchor_top = 0.639737
+anchor_right = 0.574506
+anchor_bottom = 0.639737
+offset_left = -194.655
+offset_top = -27.465
+offset_right = 194.345
+offset_bottom = 44.535
 grow_horizontal = 0
-theme_override_fonts/font = SubResource("FontFile_tj0gf")
+theme_override_fonts/font = ExtResource("2_noerv")
 theme_override_font_sizes/font_size = 65
 text = "TIME REMAINING: 56.0"
 label_settings = SubResource("LabelSettings_noerv")

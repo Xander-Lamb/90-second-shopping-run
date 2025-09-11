@@ -172,3 +172,7 @@ frame_progress = 0.351584
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(1525, 208)
 texture = ExtResource("8_hkdae")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1244, 927)
+zoom = Vector2(0.4, 0.4)

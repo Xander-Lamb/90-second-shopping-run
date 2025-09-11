@@ -386,16 +386,16 @@ scale = Vector2(1.00491, 1.00799)
 script = ExtResource("1_kpjcp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(7.25, -0.999999)
+position = Vector2(0, -1.98415)
 scale = Vector2(0.734375, 0.78125)
 sprite_frames = SubResource("SpriteFrames_0rwas")
 animation = &"Run_Up"
 frame_progress = 0.359628
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6.96581, 15.8732)
+position = Vector2(-0.995113, 14.8811)
 scale = Vector2(1.02748, -0.615635)
 shape = SubResource("CapsuleShape2D_xhfnw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(7, 7)
+zoom = Vector2(3, 3)

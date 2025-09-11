@@ -15,5 +15,5 @@ func _on_body_entered(body: Node2D) -> void:
 		print("Player is going to give wife groceries!")
 		if ObjectiveUi._is_complete():
 			print("Objective complete, now loading victory scene")
-			SceneManager.change_scene("res://victory_scene.tscn")
+			SceneManager.change_scene("res://Winning_Cutscene.tscn")
 		
