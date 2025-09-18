@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://mj1iqctkbn2d"]
+[gd_scene load_steps=26 format=3 uid="uid://mj1iqctkbn2d"]
 
 [ext_resource type="Texture2D" uid="uid://blw0e10k44otj" path="res://tilemapurbancity.png" id="1_jj4c3"]
 [ext_resource type="Texture2D" uid="uid://wsy7iqpvv8lm" path="res://tilemap_packed.png" id="2_1x0d8"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b8wsad24o6n5l" path="res://Conference_woman_idle_anim_32x32.png" id="5_h0va5"]
 [ext_resource type="Script" uid="uid://27pmj08lgdvp" path="res://area_2dEnter_Supermarket.gd" id="6_h0va5"]
 [ext_resource type="Script" uid="uid://ey84okcrdlsf" path="res://area_2d_giving_wife_groceries.gd" id="7_y6hkg"]
+[ext_resource type="PackedScene" uid="uid://cddsjcpvseui7" path="res://Fade_transitions.tscn" id="8_d0lkv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1x0d8"]
 texture = ExtResource("1_jj4c3")
@@ -2244,6 +2245,15 @@ shape = SubResource("CircleShape2D_d0lkv")
 
 [node name="From Supermarket" type="Marker2D" parent="."]
 position = Vector2(480, 279)
+
+[node name="Fade_transition" parent="." instance=ExtResource("8_d0lkv")]
+visible = false
+offset_left = -90.0
+offset_top = -36.0
+offset_right = 2039.0
+offset_bottom = 1146.0
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition"]
 
 [connection signal="body_entered" from="Area2D Enter Supermarket" to="Area2D Enter Supermarket" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D Enter Supermarket" to="Area2D Enter Supermarket" method="_on_body_exited"]

@@ -1,5 +1,6 @@
-[gd_scene load_steps=46 format=3 uid="uid://bym1ibyfb3k5u"]
+[gd_scene load_steps=47 format=3 uid="uid://bym1ibyfb3k5u"]
 
+[ext_resource type="Script" uid="uid://b8e4x0558n3vj" path="res://losing_cutscene.gd" id="1_bc0rf"]
 [ext_resource type="Texture2D" uid="uid://1vu7k001su5i" path="res://Screenshot 2025-08-07 at 9.59.20 PM.png" id="1_c4kgf"]
 [ext_resource type="Texture2D" uid="uid://c0mkybk2aop03" path="res://Bob_idle_anim_32x32.png" id="2_5ylcw"]
 [ext_resource type="Texture2D" uid="uid://0406t0kixhbx" path="res://Bob_run_32x32.png" id="3_7tp5h"]
@@ -11,7 +12,7 @@
 
 [sub_resource type="Animation" id="Animation_ix0cb"]
 resource_name = "Husband_Walk"
-length = 20.0
+length = 21.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -464,6 +465,7 @@ font_size = 28
 font_color = Color(0, 0, 0, 1)
 
 [node name="CutSceneLose" type="Node2D"]
+script = ExtResource("1_bc0rf")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -558,3 +560,5 @@ text = "It is too late."
 label_settings = SubResource("LabelSettings_bc0rf")
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

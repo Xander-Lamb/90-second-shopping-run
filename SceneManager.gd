@@ -5,6 +5,7 @@ signal scene_changed(new_scene: Node)
 var changedFromSceneName = ""
 
 func change_scene(scene_path: String):
+	#animation_player.playback_speed = 1.0 / fade_duration
 	changedFromSceneName = get_tree().current_scene.name
 	print("Changing from scene " + changedFromSceneName + " to scene from file: ", scene_path)
 	var error = get_tree().change_scene_to_file(scene_path)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=46 format=3 uid="uid://b0xfcj77fv03e"]
+[gd_scene load_steps=47 format=3 uid="uid://b0xfcj77fv03e"]
 
 [ext_resource type="Texture2D" uid="uid://1vu7k001su5i" path="res://Screenshot 2025-08-07 at 9.59.20 PM.png" id="1_ringh"]
+[ext_resource type="Script" uid="uid://cpyaqpfsua2si" path="res://winning_cutscene.gd" id="1_txucy"]
 [ext_resource type="Texture2D" uid="uid://c0mkybk2aop03" path="res://Bob_idle_anim_32x32.png" id="2_txucy"]
 [ext_resource type="Texture2D" uid="uid://0406t0kixhbx" path="res://Bob_run_32x32.png" id="3_4gl1u"]
 [ext_resource type="Texture2D" uid="uid://b8wsad24o6n5l" path="res://Conference_woman_idle_anim_32x32.png" id="4_knt3o"]
@@ -8,70 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://d37tm5ix5ft4f" path="res://pngfind.com-message-bubble-png-632891.png" id="6_21s8l"]
 [ext_resource type="FontFile" uid="uid://c2m2iwklsaovc" path="res://Roboto-VariableFont_wdth,wght.ttf" id="7_e8r5s"]
 [ext_resource type="Texture2D" uid="uid://3w2osw7nji7a" path="res://image(1).png" id="8_yoct6"]
-
-[sub_resource type="Animation" id="Animation_ugej1"]
-resource_name = "new_animation"
-length = 30.0
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Characters/Husband:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.51, 2.78),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Vector2(573, -119), Vector2(575, 282), Vector2(831, 288)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Characters/Husband/AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.53, 2.75),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [&"Run Down", &"Run Right", &"Idle Right"]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasLayer/SpeechBubble:visible")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 3.18, 4.95),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasLayer2/TextureRect/Label:text")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(5.79),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["Just on time!"]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("CanvasLayer2/TextureRect:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 5.79, 8),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [false, true, false]
-}
 
 [sub_resource type="Animation" id="Animation_6uhqv"]
 length = 0.001
@@ -134,6 +71,94 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/SpeechBubble/SpeechBubbleText:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Um..."]
+}
+
+[sub_resource type="Animation" id="Animation_ugej1"]
+resource_name = "new_animation"
+length = 18.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Husband:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.51, 2.78),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(573, -119), Vector2(575, 282), Vector2(831, 288)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Characters/Husband/AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.53, 2.75),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [&"Run Down", &"Run Right", &"Idle Right"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/SpeechBubble:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3.18, 4.95, 14.9652),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer2/TextureRect/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5.74, 8.9932, 11.0056, 11.7796),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": ["Right on time!", "Wait...", "Did you remember", "To pay?"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("CanvasLayer2/TextureRect:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5.79, 8, 8.9932, 13.3996),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasLayer/SpeechBubble/SpeechBubbleText:text")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.17, 14.9732),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["I have the groceries!", "Um..."]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_to237"]
@@ -392,6 +417,7 @@ font_size = 28
 font_color = Color(0, 0, 0, 1)
 
 [node name="CutSceneWin" type="Node2D"]
+script = ExtResource("1_txucy")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -416,7 +442,6 @@ scale = Vector2(2.75, 2.6875)
 sprite_frames = SubResource("SpriteFrames_ydkya")
 animation = &"Run Down"
 autoplay = "Run Down"
-frame_progress = 0.855318
 
 [node name="Wife" type="Node2D" parent="Characters"]
 position = Vector2(983, 324)
@@ -447,14 +472,20 @@ texture = ExtResource("6_21s8l")
 expand_mode = 1
 
 [node name="SpeechBubbleText" type="Label" parent="CanvasLayer/SpeechBubble"]
-layout_mode = 0
-offset_left = 39.0
-offset_top = 28.0
-offset_right = 262.0
-offset_bottom = 59.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.369
+anchor_right = 0.497
+anchor_bottom = 0.369
+offset_left = -111.591
+offset_top = -15.542
+offset_right = 111.409
+offset_bottom = 15.458
 theme_override_fonts/font = ExtResource("7_e8r5s")
-text = "I have the groceries!"
+text = "Um..."
 label_settings = SubResource("LabelSettings_dixv7")
+horizontal_alignment = 1
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="."]
 
@@ -487,3 +518,5 @@ text = "Just on time!"
 label_settings = SubResource("LabelSettings_bc0rf")
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
